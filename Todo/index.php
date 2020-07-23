@@ -19,17 +19,31 @@
 <body>
 <div class="container">
 <h1> To do list </h1>
-<form action="index.php" method="post">
+<form action="index.php?add_todo" method="post">
   <label for "new_todo"> Add todo </label>
   <input type="text" name="addtodo">
   <input type="submit">
 </form>  
+<?php
+
+  $url =$_SERVER['REQUEST_URI'];
+  $x = explode('?', $url);
+  $sql = "DELETE FROM todos WHERE `item_id` = $x[1]";
+  mysqli_query($conn, $sql);
+
+?>
 
 <?php 
 
-  $todo = $_POST['addtodo'];
-  $sql = "INSERT INTO todos (`content`) VALUE ('$todo')";
-  mysqli_query($conn, $sql);
+  $url =$_SERVER['REQUEST_URI'];
+  $x = explode('?', $url);
+  if (empty($_POST['addtodo']) === false) {
+    $todo = $_POST['addtodo'];
+    if (empty($x[1]) === false && $x[1] == 'add_todo') {
+      $sql = "INSERT INTO todos (`content`) VALUE ('$todo')";
+      mysqli_query($conn, $sql);
+    }
+  }
 
 ?>
 
@@ -40,7 +54,7 @@
   if ($results_check > 0) {
     while ($row = mysqli_fetch_assoc($results)) {
       echo 
-        "<h2 class='list-item'>" . $row['content'] . "</h2>";
+        "<h2 class='list-item'>" . $row['content'] . "<a href='./index.php?{$row['item_id']}'> X </a>" . "</h2>";
     }
   }
 ?>
