@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 body {
-  background-color: #373737;
+  font-family: "Open Sans", sans-serif;
+  background-color: #2B2E44;
 }
 
 #addtodo {
-  border: 2px solid white;
+  border: 2px solid #00cd7f;
   border-radius: 10px;
   padding: 0 0 0 0.5rem;
-  font-family: "Lobster", cursive;
   font-size: 1.25rem;
   color: #fff;
   width: 90%;
   height: 3rem;
-  background-color: #00cd7f;
+  background-color: #2B2E44;
   outline: none;
 }
 
@@ -33,36 +33,51 @@ body {
 }
 
 .container {
-  width: 600px;
+  width: 40vw;
   margin-top: 10vh;
 }
 
-h1 {
-  text-align: center;
-  color: #fff;
+.header-container {
+  display: table;
   background-color: #00cd7f;
-  border-top-left-radius: 2.5rem;
-  border-top-right-radius: 2.5rem;
-  border-top: 2px solid white;
+  height: 5rem;
+  width: 100%;
+  text-align: center;
 }
 
-form {
-  height: 3.5rem;
-}
-
-.fas {
+.header-container h1 {
+  display: table-cell;
+  vertical-align: middle;
   color: #fff;
 }
 
-.fas:hover {
+.form-container {
+  padding: .75rem 0;
+  background-color: #00cd7f;
+}
+
+.form-container form {
+  margin: 0 .5rem;
+}
+
+.task-container {
+  background-color: #fff;
+}
+
+.fa-trash-alt {
+  vertical-align: middle;
+  color: #fff;
+}
+
+.fa-trash-alt:hover {
   color: red;
 }
 
-#submit {
+.submit-button {
   border-radius: 50%;
   padding: 0;
   margin: 0;
-  background-color: #00cd7f;
+  background-color: #2B2E44;
   outline: none;
   border: 2px solid white;
   width: 3rem;
@@ -70,24 +85,45 @@ form {
   color: white;
   font-size: 1rem;
   font-weight: 500;
+  color: white;
+}
+
+.submit-button:hover {
+  color: #00cd7f;
+  background-color: #fff;
+  border-color: #2B2E44;
+}
+
+.submit-button:hover .fa-plus {
+  color: #2B2E44;
 }
 
 .list-item {
-  border-bottom: 3px solid white;
-  margin-bottom: 3px;
-  border-radius: 10px;
-  font-family: "Patua One", cursive;
+  margin: .5rem .5rem;
+  padding: .75rem 0;
+  border-radius: 25px;
   color: white;
   text-align: center;
-  background-color: #00cd7f;
+  background-color: #2B2E44;
   font-size: 1.45rem;
 }
 
 .list-item a {
   padding-right: 0.75rem;
+  vertical-align: middle;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 5px;
 }
 
 .list-item span {
   padding-left: 0.75rem;
+  display: block;
+}
+
+.time {
+  text-align: left;
+  font-size: .75rem;
 }
 /*# sourceMappingURL=style.css.map */

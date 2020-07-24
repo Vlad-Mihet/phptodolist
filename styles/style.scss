@@ -1,33 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 // Fonts
 
-$font1: "Fredoka One", cursive;
-$font2: "Lobster", cursive;
-$font3: "Pacifico", cursive;
-$font4: "Patua One", cursive;
-$font5: "Permanent Marker", cursive;
-$font6: "Roboto", sans-serif;
+$font: 'Open Sans', sans-serif;
 
 // Colors
 
 $primaryColor: #00cd7f;
 $secondaryColor: #fff;
+$tertiaryColor: #2B2E44;
 
 body {
-  background-color: #373737;
+  font-family: $font;
+  background-color: #2B2E44;
 }
 
 #addtodo {
-  border: 2px solid white;
+  border: 2px solid $primaryColor;
   border-radius: 10px;
   padding: 0 0 0 0.5rem;
-  font-family: $font2;
   font-size: 1.25rem;
   color: $secondaryColor;
   width: 90%;
   height: 3rem;
-  background-color: $primaryColor;
+  background-color: $tertiaryColor;
   outline: none;
   &::placeholder {
     color: $secondaryColor;
@@ -35,35 +31,48 @@ body {
 }
 
 .container {
-  width: 600px;
+  width: 40vw;
   margin-top: 10vh;
 }
 
-h1 {
-  text-align: center;
-  color: $secondaryColor;
+.header-container {
+  display: table;
   background-color: $primaryColor;
-  border-top-left-radius: 2.5rem;
-  border-top-right-radius: 2.5rem;
-  border-top: 2px solid white;
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  h1 {
+    display: table-cell;
+    vertical-align: middle;
+    color: $secondaryColor;
+  }
 }
 
-form {
-  height: 3.5rem;
+.form-container {
+  padding: .75rem 0;
+  background-color: $primaryColor;
+  form {
+    margin: 0 .5rem;
+  }
 }
 
-.fas {
+.task-container {
+  background-color: $secondaryColor;
+}
+
+.fa-trash-alt {
+  vertical-align: middle;
   color: $secondaryColor;
   &:hover {
     color: red;
   }
 }
 
-#submit {
+.submit-button {
   border-radius: 50%;
   padding: 0;
   margin: 0;
-  background-color: $primaryColor;
+  background-color: $tertiaryColor;
   outline: none;
   border: 2px solid white;
   width: 3rem;
@@ -71,21 +80,40 @@ form {
   color: white;
   font-size: 1rem;
   font-weight: 500;
+  color: white;
+}
+
+.submit-button:hover {
+  color: $primaryColor;
+  background-color: $secondaryColor;
+  border-color: $tertiaryColor;
+  .fa-plus {
+    color: $tertiaryColor;
+  }
 }
 
 .list-item {
-  border-bottom: 3px solid white;
-  margin-bottom: 3px;
-  border-radius: 10px;
-  font-family: $font4;
+  margin: .5rem .5rem;
+  padding: .75rem 0;
+  border-radius: 25px;
   color: white;
   text-align: center;
-  background-color: $primaryColor;
+  background-color: $tertiaryColor;
   font-size: 1.45rem;
   a {
     padding-right: 0.75rem;
+    vertical-align: middle;
+    height: fit-content;
+    margin-top: 5px;
   }
   span {
     padding-left: 0.75rem;
+    display: block;
   }
+  
+}
+
+.time {
+  text-align: left;
+  font-size: .75rem;
 }
