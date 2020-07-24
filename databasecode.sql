@@ -1,7 +1,17 @@
 CREATE TABLE todos (
-  item_id int(11) IDENTITY PRIMARY KEY not null,
-  content varchar(256) not null
+  item_id int(11) AUTO_INCREMENT not null,
+  content varchar(256) not null,
+  creation_date timestamp not null default current_timestamp,
+  primary key (item_id)
 );
+
+CREATE TABLE users (
+  user_id int(11) AUTO_INCREMENT not null,
+  email varchar(256) not null,
+  password varchar(256) not null,
+  primary key (user_id)
+
+)
 
 INSERT INTO todos (content)
      VALUES ('Cook Dinner');

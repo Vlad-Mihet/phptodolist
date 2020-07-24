@@ -1,18 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap");
+body {
+  background-color: #373737;
+}
+
+#addtodo {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 0 0 0 0.5rem;
+  font-family: "Lobster", cursive;
+  font-size: 1.25rem;
+  color: #fff;
+  width: 90%;
+  height: 3rem;
+  background-color: #00cd7f;
+  outline: none;
+}
+
+#addtodo::-webkit-input-placeholder {
+  color: #fff;
+}
+
+#addtodo:-ms-input-placeholder {
+  color: #fff;
+}
+
+#addtodo::-ms-input-placeholder {
+  color: #fff;
+}
+
+#addtodo::placeholder {
+  color: #fff;
+}
+
 .container {
-  width: 800px;
+  width: 600px;
   margin-top: 10vh;
 }
 
 h1 {
   text-align: center;
-  color: white;
-  background-color: blue;
+  color: #fff;
+  background-color: #00cd7f;
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
+  border-top: 2px solid white;
+}
+
+form {
+  height: 3.5rem;
+}
+
+.fas {
+  color: #fff;
+}
+
+.fas:hover {
+  color: red;
+}
+
+#submit {
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  background-color: #00cd7f;
+  outline: none;
+  border: 2px solid white;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .list-item {
+  border-bottom: 3px solid white;
+  margin-bottom: 3px;
+  border-radius: 10px;
+  font-family: "Patua One", cursive;
+  color: white;
   text-align: center;
-  background-color: green;
+  background-color: #00cd7f;
+  font-size: 1.45rem;
+}
+
+.list-item a {
+  padding-right: 0.75rem;
+}
+
+.list-item span {
+  padding-left: 0.75rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -13,30 +13,25 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
     crossorigin="anonymous"
   />
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/style.css" />
   <title>Todo List PHP & MySQL </title>
 </head>
 <body>
 <div class="container">
 <h1> To do list </h1>
-<form action="index.php?add_todo" method="post">
-  <label for "new_todo"> Add todo </label>
-  <input type="text" name="addtodo">
-  <input type="submit">
+<form class="d-flex justify-content-between" action="index.php?add_todo" method="post">
+  <input id="addtodo" type="text" name="addtodo" placeholder="Add todo">
+  <input id="submit" type="submit" value="+" />
 </form>  
 <?php
 
   $url =$_SERVER['REQUEST_URI'];
-  $x = explode('?', $url);
-  $sql = "DELETE FROM todos WHERE `item_id` = $x[1]";
-  mysqli_query($conn, $sql);
-
-?>
-
-<?php 
-
-  $url =$_SERVER['REQUEST_URI'];
-  $x = explode('?', $url);
+  if (strpos($url, '?')) {
+    $x = explode('?', $url);
+    $sql = "DELETE FROM todos WHERE `item_id` = $x[1]";
+    mysqli_query($conn, $sql);
+  }
   if (empty($_POST['addtodo']) === false) {
     $todo = $_POST['addtodo'];
     if (empty($x[1]) === false && $x[1] == 'add_todo') {
@@ -44,17 +39,13 @@
       mysqli_query($conn, $sql);
     }
   }
-
-?>
-
-<?php 
   $sql = "SELECT * FROM todos; ";
   $results = mysqli_query($conn, $sql);
   $results_check = mysqli_num_rows($results);
   if ($results_check > 0) {
     while ($row = mysqli_fetch_assoc($results)) {
       echo 
-        "<h2 class='list-item'>" . $row['content'] . "<a href='./index.php?{$row['item_id']}'> X </a>" . "</h2>";
+        "<div class='list-item d-flex justify-content-between'>" . "<span class='item-title'>" . $row['content'] . "</span>" . "<a href='./index.php?{$row['item_id']}'> <i class='fas fa-trash-alt'> </i> </a>" . "</div>";
     }
   }
 ?>

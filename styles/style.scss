@@ -1,17 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap");
+
+// Fonts
+
+$font1: "Fredoka One", cursive;
+$font2: "Lobster", cursive;
+$font3: "Pacifico", cursive;
+$font4: "Patua One", cursive;
+$font5: "Permanent Marker", cursive;
+$font6: "Roboto", sans-serif;
+
+// Colors
+
+$primaryColor: #00cd7f;
+$secondaryColor: #fff;
+
+body {
+  background-color: #373737;
+}
+
+#addtodo {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 0 0 0 0.5rem;
+  font-family: $font2;
+  font-size: 1.25rem;
+  color: $secondaryColor;
+  width: 90%;
+  height: 3rem;
+  background-color: $primaryColor;
+  outline: none;
+  &::placeholder {
+    color: $secondaryColor;
+  }
+}
+
 .container {
-  width: 800px;
+  width: 600px;
   margin-top: 10vh;
 }
 
 h1 {
   text-align: center;
-  color: white;
-  background-color: blue;
+  color: $secondaryColor;
+  background-color: $primaryColor;
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
+  border-top: 2px solid white;
+}
+
+form {
+  height: 3.5rem;
+}
+
+.fas {
+  color: $secondaryColor;
+  &:hover {
+    color: red;
+  }
+}
+
+#submit {
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  background-color: $primaryColor;
+  outline: none;
+  border: 2px solid white;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .list-item {
+  border-bottom: 3px solid white;
+  margin-bottom: 3px;
+  border-radius: 10px;
+  font-family: $font4;
+  color: white;
   text-align: center;
-  background-color: green;
+  background-color: $primaryColor;
+  font-size: 1.45rem;
+  a {
+    padding-right: 0.75rem;
+  }
+  span {
+    padding-left: 0.75rem;
+  }
 }
