@@ -28,10 +28,11 @@
 </head>
 <body>
 <?php include ('./components/navbar.php') ?>
-<div class="container">
+<div class="row">
+  <div class="col-lg-4">
   <div class="task-container">
     <div class="header-container">
-      <h1> Task Manager </h1>
+      <h1> Tasks </h1>
     </div>
 
     <?php
@@ -75,20 +76,21 @@
       if ($results_check > 0) {
         while ($row = mysqli_fetch_assoc($results)) {
           $time = substr($row['creation_date'], 11, 5);
-          echo "<div class='list-item d-flex justify-content-between'>" . "<div class='title-time'>" . "<span class='item-title'>" . $row['content'] . "</span>" . "<span class='time'>" . "Created at: " . $time . "</span>" . "</div>" . "<div class='controls'>" . "<a href=''> <i class='fas fa-check fa-lg'></i> </a>" . "<a href='./index.php?{$row['item_id']}'> <i class='fas fa-trash-alt fa-lg'> </i> </a>" . "</div>" . "</div>";
+          echo "<div class='list-item d-flex justify-content-between'>" . "<div class='title-time my-auto'>" . "<span class='item-title'>" . $row['content'] . "</span>" . "<span class='time'>" . "Created at: " . $time . "</span>" . "</div>" . "<div class='controls'>" . "<a href=''> <i class='fas fa-check'></i> </a>" . "<a href='./index.php?{$row['item_id']}'> <i class='fas fa-trash-alt'> </i> </a>" . "</div>" . "</div>";
         }
       }
     ?>
 
     <div class="form-container">
       <form class="d-flex justify-content-between" action="index.php?add_todo" method="post">
-        <input id="addtodo" type="text" name="addtodo" placeholder="Add todo">
+        <input id="addtodo" type="text" name="addtodo" placeholder="Add Task">
         <button class="submit-button" type="submit" name="submit"> <i class="fas fa-plus"></i> </button>
       </form>  
     </div>
-
     </div>
-  </div>
+    </div>
+    </div>
+    <div class="col-lg-8"></div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

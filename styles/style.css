@@ -52,9 +52,22 @@ body .navbar {
   background-color: #00cd7f;
 }
 
+body .row {
+  margin: 20px 0;
+  padding: 0;
+}
+
+body .row .col-lg-4 {
+  padding-left: 20px;
+}
+
+body .row .col-lg-8 {
+  padding: 0;
+}
+
 #addtodo {
   border: 2px solid #fff;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 0 0 0 0.5rem;
   font-size: 1.25rem;
   color: #fff;
@@ -80,26 +93,24 @@ body .navbar {
   color: #fff;
 }
 
-.container {
-  width: 40vw;
-  margin-top: 10vh;
-}
-
 .header-container {
-  display: table;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: block;
   background-color: #00cd7f;
-  height: 5rem;
   width: 100%;
   text-align: center;
 }
 
 .header-container h1 {
-  display: table-cell;
-  vertical-align: middle;
+  margin-bottom: 0;
+  padding: 1vh 0;
   color: #fff;
 }
 
 .form-container {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   padding: .75rem 0;
   background-color: #00cd7f;
 }
@@ -109,9 +120,21 @@ body .navbar {
 }
 
 .task-container {
+  border-radius: 25px;
   background-color: #fff;
 }
 
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Need to implement a custom scrollbar in case there are more tasks than place on the screen
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
 .fa-trash-alt {
   vertical-align: middle;
   color: #fff;
@@ -169,17 +192,26 @@ body .navbar {
 }
 
 .list-item {
-  margin: .5rem .5rem;
-  padding: .75rem 0;
-  border-radius: 25px;
+  margin: .5vh .5vh;
+  padding: .5vh 0;
+  border-radius: 30px;
   color: white;
   text-align: center;
   background-color: #2B2E44;
-  font-size: 1.45rem;
+  font-size: 1.25rem;
+}
+
+.list-item .item-title {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .list-item a {
-  padding-right: 0.75rem;
+  padding-right: 1vh;
   vertical-align: middle;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -187,9 +219,27 @@ body .navbar {
   margin-top: 5px;
 }
 
+.list-item .time {
+  font-size: .75rem;
+  padding-left: 2vh;
+}
+
 .list-item span {
-  padding-left: 0.75rem;
+  margin-right: 0;
+  padding-left: 1.9vh;
   display: block;
+}
+
+.list-item .controls {
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 4.2vh;
+}
+
+.list-item .controls a {
+  margin-right: .5vh;
 }
 
 .time {
