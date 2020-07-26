@@ -7,10 +7,11 @@ CREATE TABLE todos (
 
 CREATE TABLE users (
   user_id int(11) AUTO_INCREMENT not null,
-  email varchar(256) not null,
-  password varchar(256) not null,
+  user_firstname varchar(256) not null,
+  user_lastname varchar(256) not null,
+  user_email varchar(256) not null,
+  user_password varchar(256) not null,
   primary key (user_id)
-
 )
 
 INSERT INTO todos (content)

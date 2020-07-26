@@ -1,0 +1,36 @@
+@import 'variables';
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-brand {font-size: 1.5rem;
+  padding-left: 1vh;
+  padding-top: .75vh;
+  padding-bottom: .75vh;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.second-logo-word {
+  color: #fff;
+}
+
+.user-name {
+  padding-right: 1vh;
+  padding-top: .75vh;
+  padding-bottom: .75vh;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: $tertiaryColor;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+
+    transition-property: color;
+    transition-duration: .25s; 
+  }
+}

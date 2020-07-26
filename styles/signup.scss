@@ -1,0 +1,95 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif!important;
+  .row {
+    margin: 0!important;
+    padding: 0!important;
+    .col-lg-6 {
+      margin: 0!important;
+      padding: 0!important;
+    }
+  }
+  #logo {
+    color: $signupSecondary;
+    margin-left: 0.3vw;
+    margin-top: 0.3vw;
+    font-weight: 700;
+    .second-logo-word {
+      color: $signupTertiary;
+    }
+  }
+  height: 100vh;
+  background-color: $signupPrimary!important;
+  #form-column {
+    height: 100vh;
+    background-color: $signupTertiary;
+    h1 {
+      font-weight: 700;
+      margin-top: 5vh;
+      text-align: center;
+      color: $signupSecondary;
+    }
+    .header-underline {
+      margin: auto;
+      width: 17.5%;
+      border-width: 5px;
+      border-radius: 25px;
+      border-color: $signupPrimary;
+    }
+    form {
+      position:absolute;
+      transform: translate(0,-50%);
+      top:50%;
+      right:0;
+      left:0;
+      width: 60%;
+      margin: 0 auto;
+      label {
+        font-weight: 700;
+        color: $signupSecondary;
+      }
+      input {
+        outline: none;
+        color: $signupTertiary;
+        border: 1.5px solid $signupPrimary;
+        font-weight: 700;
+        border-radius: 35px;
+        height: 4vh;
+        margin-bottom: 1vh;
+        width: 100%;
+        display: block;
+        padding-left: .5vw;
+        &::placeholder {
+          color: #a6a6a6;
+          font-weight: 700;
+        }
+      }
+    }
+
+    button {
+      background-color: $loginPrimary!important;
+      color: $loginSecondary!important;
+      font-weight: 700;
+      border: 2px solid $loginPrimary;
+      width: 8vw;
+      height: 5vh;
+      border-radius: 25px;
+      display: block;
+      margin: 5vh auto 0;
+
+      &:hover {
+        background-color: #fff!important;
+        color: $signupPrimary!important;
+      }
+    }
+  }
+  }
+
+

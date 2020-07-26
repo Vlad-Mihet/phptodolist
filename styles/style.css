@@ -1,11 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+.navbar {
+  padding: 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  padding-left: 1vh;
+  padding-top: .75vh;
+  padding-bottom: .75vh;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.second-logo-word {
+  color: #fff;
+}
+
+.user-name {
+  padding-right: 1vh;
+  padding-top: .75vh;
+  padding-bottom: .75vh;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: #2B2E44;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.user-name:hover {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #2B2E44;
 }
 
+body .navbar {
+  background-color: #00cd7f;
+}
+
 #addtodo {
-  border: 2px solid #00cd7f;
+  border: 2px solid #fff;
   border-radius: 10px;
   padding: 0 0 0 0.5rem;
   font-size: 1.25rem;
@@ -71,6 +119,28 @@ body {
 
 .fa-trash-alt:hover {
   color: red;
+}
+
+.controls a:first-of-type {
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: .2rem;
+  padding-right: 0;
+}
+
+.fa-check {
+  vertical-align: middle;
+  color: #fff;
+}
+
+.fa-check:hover {
+  color: #00cd7f;
+}
+
+.fa-checka {
+  padding-right: 0;
 }
 
 .submit-button {

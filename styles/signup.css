@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  height: 100vh;
+  background-color: #0FCA7F !important;
+}
+
+body .row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body .row .col-lg-6 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body #logo {
+  color: #fff;
+  margin-left: 0.3vw;
+  margin-top: 0.3vw;
+  font-weight: 700;
+}
+
+body #logo .second-logo-word {
+  color: #2B2E44;
+}
+
+body #form-column {
+  height: 100vh;
+  background-color: #2B2E44;
+}
+
+body #form-column h1 {
+  font-weight: 700;
+  margin-top: 5vh;
+  text-align: center;
+  color: #fff;
+}
+
+body #form-column .header-underline {
+  margin: auto;
+  width: 17.5%;
+  border-width: 5px;
+  border-radius: 25px;
+  border-color: #0FCA7F;
+}
+
+body #form-column form {
+  position: absolute;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 60%;
+  margin: 0 auto;
+}
+
+body #form-column form label {
+  font-weight: 700;
+  color: #fff;
+}
+
+body #form-column form input {
+  outline: none;
+  color: #2B2E44;
+  border: 1.5px solid #0FCA7F;
+  font-weight: 700;
+  border-radius: 35px;
+  height: 4vh;
+  margin-bottom: 1vh;
+  width: 100%;
+  display: block;
+  padding-left: .5vw;
+}
+
+body #form-column form input::-webkit-input-placeholder {
+  color: #a6a6a6;
+  font-weight: 700;
+}
+
+body #form-column form input:-ms-input-placeholder {
+  color: #a6a6a6;
+  font-weight: 700;
+}
+
+body #form-column form input::-ms-input-placeholder {
+  color: #a6a6a6;
+  font-weight: 700;
+}
+
+body #form-column form input::placeholder {
+  color: #a6a6a6;
+  font-weight: 700;
+}
+
+body #form-column button {
+  background-color: #0FCA7F !important;
+  color: #fff !important;
+  font-weight: 700;
+  border: 2px solid #0FCA7F;
+  width: 8vw;
+  height: 5vh;
+  border-radius: 25px;
+  display: block;
+  margin: 5vh auto 0;
+}
+
+body #form-column button:hover {
+  background-color: #fff !important;
+  color: #0FCA7F !important;
+}
+/*# sourceMappingURL=signup.css.map */

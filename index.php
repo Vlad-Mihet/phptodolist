@@ -1,5 +1,14 @@
 <?php
   include_once 'includes/dbh.inc.php';
+  
+  $url = $_SERVER['REQUEST_URI'];
+
+  if (strpos($url, '?')) {
+    $user_id = (int)explode('?', $url)[1];
+    echo $user_id;
+  }
+  
+  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +27,7 @@
   <title> Task Manager </title>
 </head>
 <body>
+<?php include ('./components/navbar.php') ?>
 <div class="container">
   <div class="task-container">
     <div class="header-container">
@@ -25,6 +35,16 @@
     </div>
 
     <?php
+    
+    if(!isset($_SESSION['login'])){ //if login in session is not set
+      header("Location: " . "login.php");
+    }
+
+    ?>
+
+    <?php
+
+      
 
       $url =$_SERVER['REQUEST_URI'];
       if ((int)strpos($url, '?')) {
@@ -55,7 +75,7 @@
       if ($results_check > 0) {
         while ($row = mysqli_fetch_assoc($results)) {
           $time = substr($row['creation_date'], 11, 5);
-          echo "<div class='list-item d-flex justify-content-between'>" . "<div class='title-time'>" . "<span class='item-title'>" . $row['content'] . "</span>" . "<span class='time'>" . "Created at: " . $time . "</span>" . "</div>" . "<a href='./index.php?{$row['item_id']}'> <i class='fas fa-trash-alt fa-lg'> </i> </a>" . "</div>";
+          echo "<div class='list-item d-flex justify-content-between'>" . "<div class='title-time'>" . "<span class='item-title'>" . $row['content'] . "</span>" . "<span class='time'>" . "Created at: " . $time . "</span>" . "</div>" . "<div class='controls'>" . "<a href=''> <i class='fas fa-check fa-lg'></i> </a>" . "<a href='./index.php?{$row['item_id']}'> <i class='fas fa-trash-alt fa-lg'> </i> </a>" . "</div>" . "</div>";
         }
       }
     ?>

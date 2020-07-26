@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import 'variables';
+@import 'navbar';
+
 
 // Fonts
 
@@ -6,17 +9,22 @@ $font: 'Open Sans', sans-serif;
 
 // Colors
 
-$primaryColor: #00cd7f;
-$secondaryColor: #fff;
-$tertiaryColor: #2B2E44;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;;
+}
 
 body {
   font-family: $font;
   background-color: #2B2E44;
+  .navbar {
+    background-color: $primaryColor;
+  }
 }
 
 #addtodo {
-  border: 2px solid $primaryColor;
+  border: 2px solid $secondaryColor;
   border-radius: 10px;
   padding: 0 0 0 0.5rem;
   font-size: 1.25rem;
@@ -65,6 +73,26 @@ body {
   color: $secondaryColor;
   &:hover {
     color: red;
+  }
+}
+
+.controls {
+  a:first-of-type {
+    text-decoration: none;
+    width: fit-content;
+    margin-right: .2rem;
+    padding-right: 0;
+  }
+}
+
+.fa-check {
+  vertical-align: middle;
+  color: $secondaryColor;
+  &:hover {
+    color: $primaryColor;
+  }
+  &a {
+    padding-right: 0; 
   }
 }
 

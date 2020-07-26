@@ -1,0 +1,177 @@
+// Variables 
+
+@import "./variables";
+
+// Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:ital,wght@0,300;0,700;1,400&family=Ubuntu:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  font-family: 'Roboto', sans-serif!important;
+  padding: 0!important;
+
+  #logo {
+    margin-left: 0.3vw;
+    margin-top: 0.3vw;
+    font-family: 'Roboto', sans-serif;
+    color: $loginPrimary;
+    font-weight: 700;
+    .second-logo-word {
+      color: $tertiaryColor;
+    }
+  }
+
+  .link-container {
+    margin: 0 auto;
+    display: table;
+    border: 2px solid $loginPrimary;
+    width: 8vw;
+    height: 5vh;
+    border-radius: 25px;
+    a {
+      font-weight: 700;
+      font-size: 1.25rem;
+      display: table-cell;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+  }
+
+  .form-additionals {
+    margin: 0 auto;
+    width: 35%;
+    margin-bottom: 2vh;
+    font-weight: 700;
+  }
+
+  .primary-h-line {
+    width: 3vw;
+    border-width: 5px;
+    margin: 2vh auto 3.5vh;
+    border-radius: 50px;
+  }
+
+  .col-text {
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0!important;
+    }
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    form {
+      input:not([type="checkbox"]) {
+        width: 35%;
+        height: 4vh;
+        display: block;
+        margin: auto;
+        padding-left: 0.5rem;
+        border: 2px solid $loginPrimary;
+        border-radius: 5px;
+        &::placeholder {
+          font-size: 1rem;
+        }
+      }
+      input:not([type="checkbox"]):first-of-type {
+        margin-top: 2vh;
+      }
+      input:not([type="checkbox"]):last-of-type {
+        margin-top: 2vh;
+        margin-bottom: 2vh;;
+      }
+    }
+    label {
+      margin-bottom: 0;
+    }
+  }
+
+  .col-lg-5, col-lg-7 {
+    height: 100vh;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    
+  }
+
+  .col-lg-7 {
+    padding: 0!important;
+    button {
+      background-color: $loginPrimary!important;
+      color: $loginSecondary!important;
+      font-weight: 700;
+      border: 2px solid $loginPrimary;
+      width: 8vw;
+      height: 5vh;
+      border-radius: 25px;
+    }
+
+    button:hover {
+      background-color: $loginSecondary!important;
+      color: $loginPrimary!important;
+    }
+
+    h1 {
+      font-weight: 700;
+      color: $loginPrimary;
+    }
+
+    .primary-h-line {
+      border-color: $loginPrimary;
+    }
+  }
+
+  .col-lg-5 {
+    .col-text {
+      text-align: center;
+      h5 {
+        font-weight: 700;
+        margin: 2vh auto;
+        width: 65%;
+        word-wrap: break-word;
+      }
+    }
+
+    .link-container {
+      background-color: $loginPrimary;
+      border: 2px solid white;
+      a {
+        color: $loginSecondary;
+      }
+    }
+    
+    text-align: center;
+    .primary-h-line {
+      border-color: $loginSecondary;
+    }
+    h1 {
+      font-weight: 700;
+    }
+    font-weight: 300;
+    color: $loginSecondary;
+    background-color: $loginPrimary;
+  }
+  
+}
+
+.sign-up {
+  margin-top: 5vh!important;
+}
+
+.sign-up:hover {
+  background-color: $loginSecondary!important;
+  a {
+    color: $loginPrimary!important;
+  }
+}
+
+
+body {
+  height: 100vh;
+}
