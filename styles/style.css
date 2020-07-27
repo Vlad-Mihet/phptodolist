@@ -59,92 +59,121 @@ body .row {
 
 body .row .col-lg-4 {
   padding-left: 20px;
+  /*
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      
+      Need to implement a custom scrollbar in case there are more tasks than place on the screen
+      
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      */
 }
 
-body .row .col-lg-8 {
-  padding: 0;
-}
-
-#addtodo {
+body .row .col-lg-4 #addtodo {
   border: 2px solid #fff;
-  border-radius: 30px;
+  border-radius: 50px;
   padding: 0 0 0 0.5rem;
   font-size: 1.25rem;
   color: #fff;
   width: 90%;
-  height: 3rem;
+  height: 5vh;
   background-color: #2B2E44;
   outline: none;
 }
 
-#addtodo::-webkit-input-placeholder {
+body .row .col-lg-4 #addtodo::-webkit-input-placeholder {
   color: #fff;
 }
 
-#addtodo:-ms-input-placeholder {
+body .row .col-lg-4 #addtodo:-ms-input-placeholder {
   color: #fff;
 }
 
-#addtodo::-ms-input-placeholder {
+body .row .col-lg-4 #addtodo::-ms-input-placeholder {
   color: #fff;
 }
 
-#addtodo::placeholder {
+body .row .col-lg-4 #addtodo::placeholder {
   color: #fff;
 }
 
-.header-container {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+body .row .col-lg-4 .header-container {
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
   display: block;
   background-color: #00cd7f;
   width: 100%;
   text-align: center;
 }
 
-.header-container h1 {
+body .row .col-lg-4 .header-container h1 {
   margin-bottom: 0;
   padding: 1vh 0;
   color: #fff;
 }
 
-.form-container {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+body .row .col-lg-4 .form-container {
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
   padding: .75rem 0;
   background-color: #00cd7f;
 }
 
-.form-container form {
+body .row .col-lg-4 .form-container form {
   margin: 0 .5rem;
 }
 
-.task-container {
-  border-radius: 25px;
+body .row .col-lg-4 .no-tasks {
+  margin: .5vh .5vh;
+  border-radius: 35px;
+  color: white;
+  text-align: center;
+  background-color: #2B2E44;
+  font-size: 1.25rem;
+}
+
+body .row .col-lg-4 .no-tasks h4 {
+  padding: 1.5vh;
+}
+
+body .row .col-lg-4 .task-container {
+  border-radius: 35px;
   background-color: #fff;
 }
 
-/*
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+body .row .col-lg-4 .todos-container {
+  max-height: 75vh;
+  overflow-y: auto;
+  background-color: #fff;
+}
 
-Need to implement a custom scrollbar in case there are more tasks than place on the screen
+body .row .col-lg-4 .todos-container::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-*/
-.fa-trash-alt {
+body .row .col-lg-4 .todos-container::-webkit-scrollbar-thumb {
+  height: 20px;
+  border-radius: 35px;
+  background: #00cd7f;
+}
+
+body .row .col-lg-4 .todos-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+body .row .col-lg-4 .fa-trash-alt {
   vertical-align: middle;
   color: #fff;
 }
 
-.fa-trash-alt:hover {
+body .row .col-lg-4 .fa-trash-alt:hover {
   color: red;
 }
 
-.controls a:first-of-type {
+body .row .col-lg-4 .controls a:first-of-type {
   text-decoration: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -153,20 +182,20 @@ Need to implement a custom scrollbar in case there are more tasks than place on 
   padding-right: 0;
 }
 
-.fa-check {
+body .row .col-lg-4 .fa-check {
   vertical-align: middle;
   color: #fff;
 }
 
-.fa-check:hover {
+body .row .col-lg-4 .fa-check:hover {
   color: #00cd7f;
 }
 
-.fa-checka {
+body .row .col-lg-4 .fa-checka {
   padding-right: 0;
 }
 
-.submit-button {
+body .row .col-lg-4 .submit-button {
   border-radius: 50%;
   padding: 0;
   margin: 0;
@@ -181,17 +210,127 @@ Need to implement a custom scrollbar in case there are more tasks than place on 
   color: white;
 }
 
-.submit-button:hover {
+body .row .col-lg-4 .submit-button:hover {
   color: #00cd7f;
   background-color: #fff;
   border-color: #2B2E44;
 }
 
-.submit-button:hover .fa-plus {
+body .row .col-lg-4 .submit-button:hover .fa-plus {
   color: #2B2E44;
 }
 
-.list-item {
+body .row .col-lg-4 .list-item {
+  margin: .5vh .5vh;
+  padding: .5vh 0;
+  border-radius: 35px;
+  color: white;
+  text-align: center;
+  background-color: #2B2E44;
+  font-size: 1.25rem;
+}
+
+body .row .col-lg-4 .list-item .item-title {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+body .row .col-lg-4 .list-item a {
+  padding-right: 1vh;
+  vertical-align: middle;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 5px;
+}
+
+body .row .col-lg-4 .list-item .time {
+  font-size: .75rem;
+  padding-left: 2vh;
+}
+
+body .row .col-lg-4 .list-item span {
+  margin-right: 0;
+  padding-left: 1.9vh;
+  display: block;
+}
+
+body .row .col-lg-4 .list-item .controls {
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 4.2vh;
+}
+
+body .row .col-lg-4 .list-item .controls a {
+  margin-right: .5vh;
+}
+
+body .row .col-lg-4 .time {
+  text-align: left;
+  font-size: .75rem;
+}
+
+body .row .col-lg-8 {
+  padding: 0;
+}
+
+body .row .col-lg-8 .row .col-lg-6 {
+  padding: 0;
+}
+
+body .row .col-lg-8 .activity-container .completed-tasks-header-wrapper {
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  display: block;
+  background-color: #00cd7f;
+  width: 100%;
+  text-align: center;
+}
+
+body .row .col-lg-8 .activity-container .completed-tasks-header-wrapper h1 {
+  margin-bottom: 0;
+  padding: 1vh 0;
+  color: #fff;
+}
+
+body .row .col-lg-8 .activity-container .completed-tasks-container {
+  border-radius: 35px;
+  background-color: #fff;
+}
+
+body .row .col-lg-8 .activity-container .completed-tasks-container .completed-tasks-footer {
+  text-align: center;
+  background-color: #00cd7f;
+  color: #fff;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+body .row .col-lg-8 .activity-container .completed-tasks-container .completed-tasks-footer h3 {
+  padding: 1vh 0;
+}
+
+body .row .col-lg-8 .activity-container #header-wrapper {
+  border-radius: 35px;
+  display: block;
+  background-color: #00cd7f;
+  width: 100%;
+  text-align: center;
+}
+
+body .row .col-lg-8 .activity-container #header-wrapper h1 {
+  margin-bottom: 0;
+  padding: 1vh 0;
+  color: #fff;
+}
+
+body .row .col-lg-8 .activity-container .list-item {
   margin: .5vh .5vh;
   padding: .5vh 0;
   border-radius: 30px;
@@ -201,7 +340,7 @@ Need to implement a custom scrollbar in case there are more tasks than place on 
   font-size: 1.25rem;
 }
 
-.list-item .item-title {
+body .row .col-lg-8 .activity-container .list-item .item-title {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -210,7 +349,7 @@ Need to implement a custom scrollbar in case there are more tasks than place on 
   width: fit-content;
 }
 
-.list-item a {
+body .row .col-lg-8 .activity-container .list-item a {
   padding-right: 1vh;
   vertical-align: middle;
   height: -webkit-fit-content;
@@ -219,18 +358,18 @@ Need to implement a custom scrollbar in case there are more tasks than place on 
   margin-top: 5px;
 }
 
-.list-item .time {
+body .row .col-lg-8 .activity-container .list-item .time {
   font-size: .75rem;
   padding-left: 2vh;
 }
 
-.list-item span {
+body .row .col-lg-8 .activity-container .list-item span {
   margin-right: 0;
   padding-left: 1.9vh;
   display: block;
 }
 
-.list-item .controls {
+body .row .col-lg-8 .activity-container .list-item .controls {
   display: block;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -238,12 +377,21 @@ Need to implement a custom scrollbar in case there are more tasks than place on 
   line-height: 4.2vh;
 }
 
-.list-item .controls a {
+body .row .col-lg-8 .activity-container .list-item .controls a {
   margin-right: .5vh;
 }
 
-.time {
+body .row .col-lg-8 .activity-container .time {
   text-align: left;
   font-size: .75rem;
+}
+
+body .row .col-lg-8 .activity-container .fa-trash-alt {
+  vertical-align: middle;
+  color: #fff;
+}
+
+body .row .col-lg-8 .activity-container .fa-trash-alt:hover {
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */

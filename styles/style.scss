@@ -24,161 +24,315 @@ body {
   .row {
     margin: 20px 0;
     padding: 0;
+
+    /////////////////////////////
+    // First Column ( col-lg-4 )
+    /////////////////////////////
+
     .col-lg-4 {
       padding-left: 20px;
+      #addtodo {
+        border: 2px solid $secondaryColor;
+        border-radius: 50px;
+        padding: 0 0 0 0.5rem;
+        font-size: 1.25rem;
+        color: $secondaryColor;
+        width: 90%;
+        height: 5vh;
+        background-color: $tertiaryColor;
+        outline: none;
+        &::placeholder {
+          color: $secondaryColor;
+        }
+      }
+      
+      .header-container {
+        border-top-right-radius: 35px;
+        border-top-left-radius: 35px;
+        display: block;
+        background-color: $primaryColor;
+        width: 100%;
+        text-align: center;
+        h1 {
+          margin-bottom: 0;
+          padding: 1vh 0;
+          color: $secondaryColor;
+        }
+      }
+      
+      .form-container {
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        padding: .75rem 0;
+        background-color: $primaryColor;
+        form {
+          margin: 0 .5rem;
+        }
+      }
+
+      .no-tasks {
+        margin: .5vh .5vh;
+        border-radius: 35px;
+        color: white;
+        text-align: center;
+        background-color: $tertiaryColor;
+        font-size: 1.25rem;
+
+        h4 {
+          padding: 1.5vh;
+        }
+      }
+      
+      .task-container {
+        border-radius: 35px;
+        background-color: $secondaryColor;
+      }
+
+      .todos-container {
+        max-height: 75vh;
+        overflow-y: auto;
+        background-color: $secondaryColor;
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          height: 20px;
+          border-radius: 35px;
+          background: $primaryColor;
+        }
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+      }
+
+      /*
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      
+      Need to implement a custom scrollbar in case there are more tasks than place on the screen
+      
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      */
+
+      .fa-trash-alt {
+        vertical-align: middle;
+        color: $secondaryColor;
+        &:hover {
+          color: red;
+        }
+      }
+      
+      .controls {
+        a:first-of-type {
+          text-decoration: none;
+          width: fit-content;
+          margin-right: .2rem;
+          padding-right: 0;
+        }
+      }
+      
+      .fa-check {
+        vertical-align: middle;
+        color: $secondaryColor;
+        &:hover {
+          color: $primaryColor;
+        }
+        &a {
+          padding-right: 0; 
+        }
+      }
+      
+      .submit-button {
+        border-radius: 50%;
+        padding: 0;
+        margin: 0;
+        background-color: $tertiaryColor;
+        outline: none;
+        border: 2px solid white;
+        width: 3rem;
+        height: 3rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+        color: white;
+      }
+      
+      .submit-button:hover {
+        color: $primaryColor;
+        background-color: $secondaryColor;
+        border-color: $tertiaryColor;
+        .fa-plus {
+          color: $tertiaryColor;
+        }
+      }
+      
+      .list-item {
+        margin: .5vh .5vh;
+        padding: .5vh 0;
+        border-radius: 35px;
+        color: white;
+        text-align: center;
+        background-color: $tertiaryColor;
+        font-size: 1.25rem;
+        .item-title {
+          height: fit-content;
+          width: fit-content;
+        }
+        a {
+          padding-right: 1vh;
+          vertical-align: middle;
+          height: fit-content;
+          margin-top: 5px;
+        }
+        .time {
+          font-size: .75rem;
+          padding-left: 2vh;
+        }
+        span {
+          margin-right: 0;
+          padding-left: 1.9vh;
+          display: block;
+        }
+      
+        .controls {
+          display: block;
+          height: fit-content;
+          line-height: 4.2vh;
+          a {
+            margin-right: .5vh;
+          }
+        }
+        
+      }
+      
+      .time {
+        text-align: left;
+        font-size: .75rem;
+      }
     } 
+
+
+    /////////////////////////////
+    // Second Column ( col-lg-8 )
+    /////////////////////////////
+
+
     .col-lg-8 {
       padding: 0;
+      .row {
+        .col-lg-6 {
+          padding: 0;
+        }
+      }
+      .activity-container {
+
+
+        .completed-tasks-header-wrapper {
+          border-top-left-radius: 35px;
+          border-top-right-radius: 35px;
+          display: block;
+          background-color: $primaryColor;
+          width: 100%;
+          text-align: center;
+          h1 {
+            margin-bottom: 0;
+            padding: 1vh 0;
+            color: $secondaryColor;
+          }
+        }
+
+        .completed-tasks-container {
+          border-radius: 35px;
+          background-color: $secondaryColor;
+
+          .completed-tasks-footer {
+            text-align: center;
+            background-color: $primaryColor;
+            color: $secondaryColor;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+
+            h3 {
+              padding: 1vh 0;
+            }
+          }
+        }
+
+        #header-wrapper {
+          border-radius: 35px;
+          display: block;
+          background-color: #00cd7f;
+          width: 100%;
+          text-align: center;
+
+          h1 {
+            margin-bottom: 0;
+            padding: 1vh 0;
+            color: $secondaryColor;
+          }
+        }
+        .list-item {
+          margin: .5vh .5vh;
+          padding: .5vh 0;
+          border-radius: 30px;
+          color: white;
+          text-align: center;
+          background-color: $tertiaryColor;
+          font-size: 1.25rem;
+          .item-title {
+            height: fit-content;
+            width: fit-content;
+          }
+          a {
+            padding-right: 1vh;
+            vertical-align: middle;
+            height: fit-content;
+            margin-top: 5px;
+          }
+          .time {
+            font-size: .75rem;
+            padding-left: 2vh;
+          }
+          span {
+            margin-right: 0;
+            padding-left: 1.9vh;
+            display: block;
+          }
+        
+          .controls {
+            display: block;
+            height: fit-content;
+            line-height: 4.2vh;
+            a {
+              margin-right: .5vh;
+            }
+          }
+          
+        }
+        
+        .time {
+          text-align: left;
+          font-size: .75rem;
+        }
+
+        .fa-trash-alt {
+          vertical-align: middle;
+          color: $secondaryColor;
+          &:hover {
+            color: red;
+          }
+        }
+        
+      }
     }
   }
 }
-
-#addtodo {
-  border: 2px solid $secondaryColor;
-  border-radius: 30px;
-  padding: 0 0 0 0.5rem;
-  font-size: 1.25rem;
-  color: $secondaryColor;
-  width: 90%;
-  height: 3rem;
-  background-color: $tertiaryColor;
-  outline: none;
-  &::placeholder {
-    color: $secondaryColor;
-  }
-}
-
-.header-container {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  display: block;
-  background-color: $primaryColor;
-  width: 100%;
-  text-align: center;
-  h1 {
-    margin-bottom: 0;
-    padding: 1vh 0;
-    color: $secondaryColor;
-  }
-}
-
-.form-container {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  padding: .75rem 0;
-  background-color: $primaryColor;
-  form {
-    margin: 0 .5rem;
-  }
-}
-
-.task-container {
-  border-radius: 25px;
-  background-color: $secondaryColor;
-}
-/*
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-Need to implement a custom scrollbar in case there are more tasks than place on the screen
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-*/
-.fa-trash-alt {
-  vertical-align: middle;
-  color: $secondaryColor;
-  &:hover {
-    color: red;
-  }
-}
-
-.controls {
-  a:first-of-type {
-    text-decoration: none;
-    width: fit-content;
-    margin-right: .2rem;
-    padding-right: 0;
-  }
-}
-
-.fa-check {
-  vertical-align: middle;
-  color: $secondaryColor;
-  &:hover {
-    color: $primaryColor;
-  }
-  &a {
-    padding-right: 0; 
-  }
-}
-
-.submit-button {
-  border-radius: 50%;
-  padding: 0;
-  margin: 0;
-  background-color: $tertiaryColor;
-  outline: none;
-  border: 2px solid white;
-  width: 3rem;
-  height: 3rem;
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-}
-
-.submit-button:hover {
-  color: $primaryColor;
-  background-color: $secondaryColor;
-  border-color: $tertiaryColor;
-  .fa-plus {
-    color: $tertiaryColor;
-  }
-}
-
-.list-item {
-  margin: .5vh .5vh;
-  padding: .5vh 0;
-  border-radius: 30px;
-  color: white;
-  text-align: center;
-  background-color: $tertiaryColor;
-  font-size: 1.25rem;
-  .item-title {
-    height: fit-content;
-    width: fit-content;
-  }
-  a {
-    padding-right: 1vh;
-    vertical-align: middle;
-    height: fit-content;
-    margin-top: 5px;
-  }
-  .time {
-    font-size: .75rem;
-    padding-left: 2vh;
-  }
-  span {
-    margin-right: 0;
-    padding-left: 1.9vh;
-    display: block;
-  }
-
-  .controls {
-    display: block;
-    height: fit-content;
-    line-height: 4.2vh;
-    a {
-      margin-right: .5vh;
-    }
-  }
   
-}
 
-.time {
-  text-align: left;
-  font-size: .75rem;
-}
+

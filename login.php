@@ -1,10 +1,11 @@
 <?php
 
+  session_start();
+
   include_once 'includes/users.inc.php';
 
   $url = $_SERVER['REQUEST_URI'];
 
-  echo $url;
 
   if (strstr($url, "?")) {
     if (explode("?", $url)[1] == "check_in_db") {
@@ -13,8 +14,6 @@
 
       $email_exists = "SELECT email FROM users WHERE email = $login_email";
       $password_exists = "SELECT user_password FROM users WHERE user_password = $login_password";
-
-      echo $login_email, $login_password;
       
       if ($email_exists && $password_exists) {
 
@@ -28,7 +27,8 @@
           $row_data = mysqli_fetch_row($user_row);
           $user_id = $row_data[0];
 
-          $_SESSION['login'] = "$row_data[1] $row_data[2]";
+
+          $_SESSION['login'] = $row_data[1];
 
           header('Location: ' . "index.php?$user_id");
         }
